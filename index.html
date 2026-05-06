@@ -3,367 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>테트리스 기본 용어 · 빌드 · 오프닝 정리</title>
-
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="테트리스 기본 용어, 테트리미노, 빌드, 오프닝, 연습 루틴을 위키 형식으로 정리한 가이드입니다." />
+  <title>테트리스 노트 · 테트리스 위키형 가이드</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#content">본문으로 건너뛰기</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <h1>테트리스 기본 용어 · 빌드 · 오프닝 정리</h1>
-      <p>
-        업로드해준 레트로 스타일 이미지를 기반으로 제작한
-        테트리스 문서형 페이지입니다.
-      </p>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">▣</span>
+      <div>
+        <strong>테트리스 노트</strong>
+        <small>기초, 용어, 빌드, 연습 순서를 차분히 정리한 노트</small>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="다크 모드 전환">◐</button>
+      <button class="icon-button mobile-only" id="menuToggle" type="button" aria-label="메뉴 열기">☰</button>
     </div>
   </header>
 
-  <main class="page">
-
-    <article class="post">
-
-      <div class="post-meta">
-        <span>게임 · 테트리스</span>
-        <span>정리글</span>
-        <span>초보자 가이드</span>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-card search-card">
+        <label for="wikiSearch">문서 검색</label>
+        <input id="wikiSearch" type="search" placeholder="예: T스핀, DT포, 홀드" autocomplete="off" />
+        <p class="search-help">제목, 태그, 본문을 기준으로 찾아볼 수 있습니다.</p>
       </div>
 
-      <section class="summary">
-        <p>
-          각 섹션을 눌러 내용을 펼쳐 볼 수 있습니다.
-          인간은 테트리스도 문서화한다는 사실이 꽤 흥미롭습니다.
-        </p>
-      </section>
-
-      <nav class="toc">
-        <h2>목차</h2>
-
-        <a href="#basic" class="toc-link">
-          1. 테트리스 기본 용어 & 블록 소개
-        </a>
-
-        <a href="#build" class="toc-link">
-          2. 대표 빌드
-        </a>
-
-        <a href="#opening" class="toc-link">
-          3. 개막 오프닝
-        </a>
-
-        <a href="#practice" class="toc-link">
-          4. 연습 순서
-        </a>
-
-        <a href="#tips" class="toc-link">
-          5. 초보자 팁
-        </a>
+      <nav class="wiki-nav" aria-label="위키 목차">
+        <a class="nav-link active" href="#overview" data-section="overview">개요</a>
+        <a class="nav-link" href="#basic" data-section="basic">기본 구조</a>
+        <a class="nav-link" href="#minos" data-section="minos">테트리미노</a>
+        <a class="nav-link" href="#terms" data-section="terms">핵심 용어</a>
+        <a class="nav-link" href="#builds" data-section="builds">대표 빌드</a>
+        <a class="nav-link" href="#openings" data-section="openings">개막 오프닝</a>
+        <a class="nav-link" href="#practice" data-section="practice">연습 로드맵</a>
+        <a class="nav-link" href="#tips" data-section="tips">초보자 팁</a>
       </nav>
 
-      <div class="button-area">
-        <button data-target="basic">블록 & 용어</button>
-        <button data-target="build">주요 빌드</button>
-        <button data-target="opening">오프닝</button>
-        <button data-target="practice">로드맵</button>
+      <div class="sidebar-card stat-card">
+        <span>읽기 진행률</span>
+        <div class="progress-track"><div class="progress-bar" id="readProgress"></div></div>
       </div>
+    </aside>
 
-      <!-- 기본 용어 -->
-
-      <section id="basic" class="content-section active">
-
-        <div class="section-header">
-          <h2>1. 테트리스 기본 용어 & 블록 소개</h2>
-          <span class="arrow-icon">▼</span>
+    <main id="content" class="content">
+      <section class="hero wiki-section" id="overview" data-title="개요" data-tags="개요 소개 위키 테트리스">
+        <div class="hero-copy">
+          <p class="eyebrow">Tetris Study Notes</p>
+          <h1>테트리스 기본기 정리</h1>
+          <p>
+            처음 배우는 사람이 헷갈리기 쉬운 기본 개념, 주요 용어, 대표 빌드,
+            개막 오프닝, 연습 루틴을 한곳에 모았습니다. 외우기보다 흐름을 이해하는 데 초점을 맞췄습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#basic">처음부터 보기</a>
+            <a class="ghost-link" href="#builds">빌드 바로 보기</a>
+          </div>
         </div>
+        <div class="hero-panel" aria-label="요약 정보">
+          <div><span>문서 수</span><strong>8</strong></div>
+          <div><span>난이도</span><strong>입문~중급</strong></div>
+          <div><span>핵심 목표</span><strong>안정적 필드 관리</strong></div>
+        </div>
+      </section>
 
-        <div class="section-content">
+      <section class="wiki-section article" id="basic" data-title="기본 구조" data-tags="기본 구조 라인 클리어 공격 필드">
+        <div class="section-heading">
+          <p class="eyebrow">01 · Fundamentals</p>
+          <h2>테트리스의 기본 구조</h2>
+        </div>
+        <div class="callout">
+          <strong>핵심 요약</strong>
+          <p>테트리스는 단순히 블록을 빨리 놓는 게임이 아닙니다. 필드 관리, 다음 블록 예측, 회전 판단, 공격 준비가 동시에 필요한 전략 퍼즐입니다.</p>
+        </div>
+        <div class="prose-grid">
+          <article>
+            <h3>목표</h3>
+            <p>7종류의 테트리미노를 필드에 배치해 가로줄을 완성합니다. 한 줄이 전부 채워지면 사라지고, 위의 블록이 내려옵니다.</p>
+          </article>
+          <article>
+            <h3>공격</h3>
+            <p>여러 줄을 동시에 지우거나 T스핀을 성공시키면 대전형 테트리스에서 상대에게 방해 줄을 보냅니다.</p>
+          </article>
+          <article>
+            <h3>우선순위</h3>
+            <p>초보 단계에서는 빠른 속도보다 구멍을 만들지 않는 배치와 낮은 필드 유지가 중요합니다.</p>
+          </article>
+        </div>
+      </section>
 
-          <div class="special-bg-text">
-            <p>
-              테트리미노(Tetrimino)는 4개의 정사각형이 연결된 블록입니다.
-              각 블록은 고유한 색상과 회전 특성을 가집니다.
-            </p>
-          </div>
+      <section class="wiki-section article" id="minos" data-title="테트리미노" data-tags="I O T S Z J L 미노 블록 테트리미노">
+        <div class="section-heading">
+          <p class="eyebrow">02 · Tetrominoes</p>
+          <h2>7종의 테트리미노</h2>
+        </div>
+        <div class="mino-grid">
+          <article class="mino-card"><span class="mino-shape i"></span><h3>I-미노</h3><p>긴 막대형 블록입니다. 4줄 제거인 테트리스를 만들 수 있어 공격과 정리에 중요합니다.</p></article>
+          <article class="mino-card"><span class="mino-shape o"></span><h3>O-미노</h3><p>정사각형 블록입니다. 안정적이지만 복잡한 틈을 해결하는 능력은 낮습니다.</p></article>
+          <article class="mino-card"><span class="mino-shape t"></span><h3>T-미노</h3><p>T스핀의 핵심 블록입니다. 회전을 이용한 고급 기술에 자주 사용됩니다.</p></article>
+          <article class="mino-card"><span class="mino-shape s"></span><h3>S-미노</h3><p>계단형 지형을 만들거나 메울 때 쓰입니다. 잘못 놓으면 구멍을 만들기 쉽습니다.</p></article>
+          <article class="mino-card"><span class="mino-shape z"></span><h3>Z-미노</h3><p>S-미노와 반대 방향입니다. 기울어진 지형을 맞출 때 유용합니다.</p></article>
+          <article class="mino-card"><span class="mino-shape j"></span><h3>J-미노</h3><p>한쪽으로 꺾인 형태입니다. 벽면 정리와 높이 차이 보정에 자주 쓰입니다.</p></article>
+          <article class="mino-card"><span class="mino-shape l"></span><h3>L-미노</h3><p>J-미노의 반대 방향입니다. 빌드의 기초 구조를 만들 때 자주 등장합니다.</p></article>
+        </div>
+      </section>
 
-          <h3>7종의 테트리미노 소개</h3>
-
-          <div class="mino-grid">
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot i"></span>
-                I-미노
-              </h4>
-
-              <p>
-                긴 막대 형태의 블록입니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot o"></span>
-                O-미노
-              </h4>
-
-              <p>
-                정사각형 블록입니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot t"></span>
-                T-미노
-              </h4>
-
-              <p>
-                T스핀의 핵심 블록입니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot s"></span>
-                S-미노
-              </h4>
-
-              <p>
-                계단형 지형 구성에 사용됩니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot z"></span>
-                Z-미노
-              </h4>
-
-              <p>
-                S-미노와 반대 형태입니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot j"></span>
-                J-미노
-              </h4>
-
-              <p>
-                벽면 정리에 자주 사용됩니다.
-              </p>
-            </div>
-
-            <div class="mino-card">
-              <h4>
-                <span class="mino-dot l"></span>
-                L-미노
-              </h4>
-
-              <p>
-                빌드 기반 제작에 자주 사용됩니다.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="img-container">
-            <img src="images/banner.jpg" alt="테트리스 이미지">
-          </div>
-
-          <h3>핵심 시스템 용어</h3>
-
+      <section class="wiki-section article" id="terms" data-title="핵심 용어" data-tags="홀드 넥스트 고스트 7-bag 백투백 콤보 T스핀">
+        <div class="section-heading">
+          <p class="eyebrow">03 · Glossary</p>
+          <h2>핵심 시스템 용어</h2>
+        </div>
+        <div class="table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>용어</th>
-                <th>설명</th>
-              </tr>
-            </thead>
-
+            <thead><tr><th>용어</th><th>설명</th><th>입문 중요도</th></tr></thead>
             <tbody>
-
-              <tr>
-                <td>홀드</td>
-                <td>현재 미노를 저장하는 기능입니다.</td>
-              </tr>
-
-              <tr>
-                <td>넥스트</td>
-                <td>다음 미노를 미리 보여주는 시스템입니다.</td>
-              </tr>
-
-              <tr>
-                <td>가방(7-Bag)</td>
-                <td>7개 블록이 한 세트로 섞여 나오는 방식입니다.</td>
-              </tr>
-
-              <tr>
-                <td>고스트</td>
-                <td>블록이 떨어질 위치를 미리 보여줍니다.</td>
-              </tr>
-
+              <tr><td>홀드</td><td>현재 미노를 저장했다가 원하는 타이밍에 다시 꺼내는 기능입니다.</td><td>높음</td></tr>
+              <tr><td>넥스트</td><td>다음에 등장할 미노 목록입니다. 현재 블록만 보고 두면 다음 배치가 막히기 쉽습니다.</td><td>매우 높음</td></tr>
+              <tr><td>가방(7-Bag)</td><td>7종의 미노가 한 묶음으로 섞여 나오는 시스템입니다.</td><td>중간</td></tr>
+              <tr><td>고스트</td><td>하드드롭 시 블록이 떨어질 위치를 미리 보여주는 표시입니다.</td><td>높음</td></tr>
+              <tr><td>백투백</td><td>테트리스나 T스핀 같은 강한 공격을 연속으로 성공시키는 상태입니다.</td><td>중간</td></tr>
+              <tr><td>콤보</td><td>연속으로 줄을 지우는 상황입니다. 낮은 필드 운영과 함께 익히면 좋습니다.</td><td>중간</td></tr>
             </tbody>
           </table>
-
         </div>
       </section>
 
-      <!-- 빌드 -->
-
-      <section id="build" class="content-section">
-
-        <div class="section-header">
-          <h2>2. 대표 빌드</h2>
-          <span class="arrow-icon">▼</span>
+      <section class="wiki-section article" id="builds" data-title="대표 빌드" data-tags="DT포 퍼펙트 클리어 PC T스핀 빌드 공격">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Builds</p>
+          <h2>대표 빌드</h2>
         </div>
-
-        <div class="section-content">
-
-          <p>
-            특정 공격 형태를 만들기 위해 블록을 배치하는 구조를 빌드라고 합니다.
-          </p>
-
-          <div class="build-box">
-
-            <h3>DT포</h3>
-
-            <div class="img-container">
-              <img src="images/dt-cannon.jpg" alt="DT포 이미지">
+        <div class="build-grid">
+          <article class="feature-card">
+            <img src="images/dt-cannon.jpg" alt="DT포 예시 이미지" />
+            <div>
+              <span class="tag">공격형</span>
+              <h3>DT포</h3>
+              <p>DT포는 T스핀 더블과 T스핀 트리플을 연속으로 노리는 대표 공격 빌드입니다. 성공하면 초반 흐름을 강하게 가져올 수 있습니다.</p>
+              <ul>
+                <li>장점: 공격력이 높고 압박이 빠름</li>
+                <li>단점: 형태 암기와 순서 대응이 필요함</li>
+              </ul>
             </div>
-
-            <p>
-              T스핀 더블과 트리플을 연속으로 사용하는 대표적인 공격 빌드입니다.
-            </p>
-
-          </div>
-
-          <div class="build-box">
-
-            <h3>퍼펙트 클리어</h3>
-
-            <div class="img-container">
-              <img src="images/perfect.jpg" alt="퍼펙트 클리어 이미지">
+          </article>
+          <article class="feature-card">
+            <img src="images/perfect.jpg" alt="퍼펙트 클리어 예시 이미지" />
+            <div>
+              <span class="tag">정리형</span>
+              <h3>퍼펙트 클리어</h3>
+              <p>필드 위의 모든 블록을 제거하는 기술입니다. 성공 시 강력하지만, 남은 블록과 경우의 수 판단이 필요합니다.</p>
+              <ul>
+                <li>장점: 성공 보상이 큼</li>
+                <li>단점: 실패하면 필드가 애매해질 수 있음</li>
+              </ul>
             </div>
-
-            <p>
-              필드의 블록을 모두 제거하는 강력한 기술입니다.
-            </p>
-
-          </div>
-
+          </article>
         </div>
       </section>
 
-      <!-- 오프닝 -->
-
-      <section id="opening" class="content-section">
-
-        <div class="section-header">
-          <h2>3. 개막 오프닝</h2>
-          <span class="arrow-icon">▼</span>
+      <section class="wiki-section article" id="openings" data-title="개막 오프닝" data-tags="TKI MKO PC 오프닝 개막 초반">
+        <div class="section-heading">
+          <p class="eyebrow">05 · Openings</p>
+          <h2>개막 오프닝</h2>
+<figure class="build-figure">
+  <img class="build-image" src="images/opening-screen.png" alt="개막 오프닝 플레이 화면">
+  <figcaption>개막 운영 예시. 초반 필드 모양과 NEXT 흐름을 함께 확인한다.</figcaption>
+</figure>
         </div>
-
-        <div class="section-content">
-
-          <ul class="opening-list">
-
-            <li>
-              <strong>TKI 3</strong>
-              <p>
-                가장 많이 사용되는 범용 T스핀 오프닝입니다.
-              </p>
-            </li>
-
-            <li>
-              <strong>MKO Stack</strong>
-              <p>
-                안정적인 필드 유지에 특화된 오프닝입니다.
-              </p>
-            </li>
-
-            <li>
-              <strong>PC 오프닝</strong>
-              <p>
-                퍼펙트 클리어 확률을 높이는 구조입니다.
-              </p>
-            </li>
-
-          </ul>
-
+        <div class="timeline">
+          <article><span>1</span><h3>TKI 3</h3>
+<figure class="build-figure">
+  <img class="build-image" src="images/tki-build.png" alt="TKI 빌드 예시 화면">
+  <figcaption>TKI 개막 예시. HOLD와 NEXT를 같이 보면서 후속 운영을 판단한다.</figcaption>
+</figure><p>T스핀 더블을 빠르게 준비할 수 있는 안정적인 오프닝입니다. 후속 운영으로 이어가기 쉽습니다.</p></article>
+          <article><span>2</span><h3>MKO Stack</h3><p>무리한 공격보다 깔끔한 지형 유지에 초점을 둔 오프닝입니다.</p></article>
+          <article><span>3</span><h3>PC 오프닝</h3><p>퍼펙트 클리어를 노리는 초반 전략입니다. 블록 순서 파악이 핵심입니다.</p></article>
         </div>
       </section>
 
-      <!-- 연습 -->
-
-      <section id="practice" class="content-section">
-
-        <div class="section-header">
-          <h2>4. 연습 순서</h2>
-          <span class="arrow-icon">▼</span>
+      <section class="wiki-section article" id="practice" data-title="연습 로드맵" data-tags="연습 순서 로드맵 sprint next 평평하게 쌓기">
+        <div class="section-heading">
+          <p class="eyebrow">06 · Practice</p>
+          <h2>연습 로드맵</h2>
         </div>
+        <ol class="roadmap">
+          <li><strong>평평하게 쌓기</strong><p>구멍을 만들지 않고 낮게 유지하는 연습입니다. 모든 기술의 밑바닥입니다. 가장 단순하지만 실력 차이가 크게 나는 부분입니다.</p></li>
+          <li><strong>Next 보기</strong><p>현재 블록만 보지 말고 다음 블록을 확인하면서 배치 계획을 세웁니다.</p></li>
+          <li><strong>T스핀 구조 익히기</strong><p>T미노가 들어갈 지형을 알아보고 회전으로 넣는 감각을 만듭니다.</p></li>
+          <li><strong>40 Lines Sprint</strong><p>속도와 정확도를 함께 훈련합니다. 처음에는 기록보다 실수 감소를 우선합니다.</p></li>
+        </ol>
+      </section>
 
-        <div class="section-content">
-
-          <ol class="practice-list">
-
-            <li>
-              평평하게 쌓기
-            </li>
-
-            <li>
-              Next 보기 습관 만들기
-            </li>
-
-            <li>
-              T스핀 구조 익히기
-            </li>
-
-            <li>
-              Sprint 연습
-            </li>
-
-          </ol>
-
+      <section class="wiki-section article" id="tips" data-title="초보자 팁" data-tags="초보자 팁 안정성 속도 필드 관리">
+        <div class="section-heading">
+          <p class="eyebrow">07 · Tips</p>
+          <h2>초보자 팁</h2>
+        </div>
+        <div class="tip-grid">
+          <article><h3>속도보다 안정성</h3><p>빠르게 놓아도 구멍이 많으면 복구가 어렵습니다. 먼저 정확한 배치가 우선입니다.</p></article>
+          <article><h3>필드는 낮게</h3><p>높게 쌓을수록 선택지가 줄어듭니다. 위기 상황에서는 공격보다 정리가 먼저입니다.</p></article>
+          <article><h3>기술은 하나씩</h3><p>T스핀, 백투백, 오프닝을 한꺼번에 외우면 머리만 복잡해집니다. 하나씩 붙이세요.</p></article>
         </div>
       </section>
 
-      <!-- 팁 -->
-
-      <section id="tips" class="content-section">
-
-        <div class="section-header">
-          <h2>5. 초보자 팁</h2>
-          <span class="arrow-icon">▼</span>
-        </div>
-
-        <div class="section-content">
-
-          <div class="note-box">
-
-            <strong>💡 팁</strong>
-
-            <p>
-              속도보다 중요한 건 필드 안정성입니다.
-              필드가 무너지면 인간 정신도 같이 무너집니다.
-            </p>
-
-          </div>
-
-        </div>
+      <section class="empty-state" id="emptyState" hidden>
+        <h2>검색 결과가 없습니다</h2>
+        <p>다른 단어로 다시 검색해 보세요.</p>
       </section>
+    </main>
+  </div>
 
-    </article>
-
-  </main>
+  <button class="to-top" id="toTop" type="button" aria-label="맨 위로 이동">↑</button>
 
   <footer class="footer">
-    <p>
-      © 2026 Tetris Master Guide
-    </p>
+    <p>© 2026 테트리스 노트 · HTML/CSS/JS static project</p>
   </footer>
 
   <script src="js/script.js"></script>
